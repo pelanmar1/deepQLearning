@@ -45,8 +45,7 @@ class DQNAgent:
         # Neural Net for Deep-Q learning Model
         model = Sequential()
         model.add(Dense(16, input_dim=self.state_size, activation='relu'))
-        model.add(Dense(32, activation='relu'))
-        model.add(Dense(256, activation='relu'))
+        model.add(Dense(24, activation='relu'))
         model.add(Dense(self.action_size, activation='linear'))
         model.compile(loss=self._huber_loss,
                       optimizer=Adam(lr=self.learning_rate))
@@ -94,8 +93,8 @@ if __name__ == "__main__":
     state_size = np.prod(state_size)
     action_size = env.action_space.n
     agent = DQNAgent(state_size, action_size)
-    print("Loading weights...")
-    agent.load("./2048-ddqn2.h5")
+    # print("Loading weights...")
+    # agent.load("./2048-ddqn2.h5")
     done = False
     batch_size = 32
 
@@ -124,5 +123,5 @@ if __name__ == "__main__":
                 agent.replay(batch_size)
         if e % 10 == 0:
             print("Saving weights...")
-            agent.save("./2048-ddqn2.h5")
+            agent.save("./save/2048ddqn2.h5")
             
