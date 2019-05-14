@@ -8,15 +8,24 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 from keras import backend as K
-
+import os
 import tensorflow as tf
 
-EPISODES = 1000
+EPISODES = 10000
+PROGRESS_FN = "progress.csv"
+WEIGHTS_FN = "./save/2048ddqn2.h5"
+ld_weights=True
+
+
+def append_to_csv(fn, csv_row):
+    with open(fn,'a') as fd:
+        fd.write(csv_row)
+
 class DQNAgent:
     def __init__(self, state_size, action_size):
         self.state_size = state_size
         self.action_size = action_size
-        self.memory = deque(maxlen=2000)
+        self.memory = deque(maxlen=50000)
         self.gamma = 0.95    # discount rate
         self.epsilon = 1.0  # exploration rate
         self.epsilon_min = 0.01
@@ -93,8 +102,9 @@ if __name__ == "__main__":
     state_size = np.prod(state_size)
     action_size = env.action_space.n
     agent = DQNAgent(state_size, action_size)
-    # print("Loading weights...")
-    # agent.load("./2048-ddqn2.h5")
+    if ld_weights is True:
+        print("Loading weights...")
+        agent.load(WEIGHTS_FN)
     done = False
     batch_size = 32
 
@@ -116,12 +126,13 @@ if __name__ == "__main__":
             state = next_state
             if done:
                 agent.update_target_model()
-                print("episode: {}/{}, score: {}, e: {:.2}, #moves: {}, max_tile: {}"
-                      .format(e, EPISODES, max_score, agent.epsilon, time, max_tile))
+                print("episode: {}/{}, score: {}, e: {:.2}, #moves: {}, max_tile: {}".format(e, EPISODES, max_score, agent.epsilon, time, max_tile))
+                csv_row = "{};{};{};{};{};{}\n".format(e,EPISODES,max_score,agent.epsilon, time, max_tile)
+                append_to_csv(PROGRESS_FN,csv_row)
                 break
             if len(agent.memory) > batch_size:
                 agent.replay(batch_size)
         if e % 10 == 0:
             print("Saving weights...")
-            agent.save("./save/2048ddqn2.h5")
+            agent.save(WEIGHTS_FN)
             
