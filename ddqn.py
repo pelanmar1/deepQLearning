@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import random
+import gym_2048
 import gym
 import numpy as np
 from collections import deque
@@ -10,8 +11,7 @@ from keras import backend as K
 
 import tensorflow as tf
 
-EPISODES = 5000
-
+EPISODES = 1000
 class DQNAgent:
     def __init__(self, state_size, action_size):
         self.state_size = state_size
@@ -44,8 +44,9 @@ class DQNAgent:
     def _build_model(self):
         # Neural Net for Deep-Q learning Model
         model = Sequential()
-        model.add(Dense(24, input_dim=self.state_size, activation='relu'))
-        model.add(Dense(24, activation='relu'))
+        model.add(Dense(16, input_dim=self.state_size, activation='relu'))
+        model.add(Dense(32, activation='relu'))
+        model.add(Dense(256, activation='relu'))
         model.add(Dense(self.action_size, activation='linear'))
         model.compile(loss=self._huber_loss,
                       optimizer=Adam(lr=self.learning_rate))
@@ -87,31 +88,41 @@ class DQNAgent:
 
 
 if __name__ == "__main__":
-    env = gym.make('CartPole-v1')
-    state_size = env.observation_space.shape[0]
+    # env = gym.make('CartPole-v1')
+    env = gym.make('2048-v0')
+    state_size = env.observation_space.shape
+    state_size = np.prod(state_size)
     action_size = env.action_space.n
     agent = DQNAgent(state_size, action_size)
-    # agent.load("./save/cartpole-ddqn.h5")
+    print("Loading weights...")
+    agent.load("./2048-ddqn2.h5")
     done = False
     batch_size = 32
 
     for e in range(EPISODES):
         state = env.reset()
+        max_tile = 0
+        max_score = 0
         state = np.reshape(state, [1, state_size])
-        for time in range(500):
+        for time in range(10000):
             # env.render()
+            # print("\n")
             action = agent.act(state)
             next_state, reward, done, _ = env.step(action)
+            max_score += reward
             reward = reward if not done else -10
             next_state = np.reshape(next_state, [1, state_size])
             agent.remember(state, action, reward, next_state, done)
+            max_tile = max(np.max(state), max_tile)
             state = next_state
             if done:
                 agent.update_target_model()
-                print("episode: {}/{}, score: {}, e: {:.2}"
-                      .format(e, EPISODES, time, agent.epsilon))
+                print("episode: {}/{}, score: {}, e: {:.2}, #moves: {}, max_tile: {}"
+                      .format(e, EPISODES, max_score, agent.epsilon, time, max_tile))
                 break
             if len(agent.memory) > batch_size:
                 agent.replay(batch_size)
-        # if e % 10 == 0:
-        #     agent.save("./save/cartpole-ddqn.h5")
+        if e % 10 == 0:
+            print("Saving weights...")
+            agent.save("./2048-ddqn2.h5")
+            
