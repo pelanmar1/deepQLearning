@@ -1786,3 +1786,129 @@ episode: 1606/10000, score: 624, e: 0.0099, #moves: 138, max_tile: 32
 episode: 1607/10000, score: 244, e: 0.0099, #moves: 67, max_tile: 16
 episode: 1608/10000, score: 584, e: 0.0099, #moves: 129, max_tile: 64
 episode: 1609/10000, score: 952, e: 0.0099, #moves: 502, max_tile: 64
+episode: 1610/10000, score: 708, e: 0.0099, #moves: 133, max_tile: 64
+Saving weights...
+episode: 1611/10000, score: 804, e: 0.0099, #moves: 270, max_tile: 64
+episode: 1612/10000, score: 1316, e: 0.0099, #moves: 452, max_tile: 128
+episode: 1613/10000, score: 748, e: 0.0099, #moves: 408, max_tile: 64
+episode: 1614/10000, score: 560, e: 0.0099, #moves: 137, max_tile: 64
+episode: 1615/10000, score: 652, e: 0.0099, #moves: 91, max_tile: 64
+episode: 1616/10000, score: 1716, e: 0.0099, #moves: 822, max_tile: 128
+episode: 1617/10000, score: 656, e: 0.0099, #moves: 180, max_tile: 64
+episode: 1618/10000, score: 612, e: 0.0099, #moves: 233, max_tile: 64
+episode: 1619/10000, score: 932, e: 0.0099, #moves: 207, max_tile: 64
+episode: 1620/10000, score: 708, e: 0.0099, #moves: 307, max_tile: 64
+Saving weights...
+episode: 1621/10000, score: 1632, e: 0.0099, #moves: 348, max_tile: 128
+episode: 1622/10000, score: 800, e: 0.0099, #moves: 326, max_tile: 64
+episode: 1623/10000, score: 732, e: 0.0099, #moves: 232, max_tile: 64
+episode: 1624/10000, score: 1208, e: 0.0099, #moves: 194, max_tile: 128
+episode: 1625/10000, score: 508, e: 0.0099, #moves: 92, max_tile: 64
+episode: 1626/10000, score: 164, e: 0.0099, #moves: 41, max_tile: 16
+episode: 1627/10000, score: 504, e: 0.0099, #moves: 74, max_tile: 64
+episode: 1628/10000, score: 608, e: 0.0099, #moves: 156, max_tile: 64
+episode: 1629/10000, score: 348, e: 0.0099, #moves: 81, max_tile: 32
+episode: 1630/10000, score: 672, e: 0.0099, #moves: 99, max_tile: 64
+Saving weights...
+episode: 1631/10000, score: 556, e: 0.0099, #moves: 104, max_tile: 64
+episode: 1632/10000, score: 484, e: 0.0099, #moves: 137, max_tile: 32
+episode: 1633/10000, score: 588, e: 0.0099, #moves: 84, max_tile: 64
+episode: 1634/10000, score: 1152, e: 0.0099, #moves: 153, max_tile: 128
+episode: 1635/10000, score: 860, e: 0.0099, #moves: 161, max_tile: 64
+episode: 1636/10000, score: 544, e: 0.0099, #moves: 115, max_tile: 64
+episode: 1637/10000, score: 620, e: 0.0099, #moves: 97, max_tile: 32
+episode: 1638/10000, score: 296, e: 0.0099, #moves: 62, max_tile: 32
+episode: 1639/10000, score: 936, e: 0.0099, #moves: 282, max_tile: 64
+episode: 1640/10000, score: 1136, e: 0.0099, #moves: 434, max_tile: 128
+Saving weights...
+episode: 1641/10000, score: 2944, e: 0.0099, #moves: 588, max_tile: 256
+episode: 1642/10000, score: 276, e: 0.0099, #moves: 72, max_tile: 32
+episode: 1643/10000, score: 600, e: 0.0099, #moves: 119, max_tile: 64
+episode: 1644/10000, score: 456, e: 0.0099, #moves: 87, max_tile: 32
+episode: 1645/10000, score: 792, e: 0.0099, #moves: 121, max_tile: 64
+episode: 1646/10000, score: 560, e: 0.0099, #moves: 93, max_tile: 32
+episode: 1647/10000, score: 1016, e: 0.0099, #moves: 193, max_tile: 128
+episode: 1648/10000, score: 208, e: 0.0099, #moves: 71, max_tile: 32
+episode: 1649/10000, score: 176, e: 0.0099, #moves: 43, max_tile: 16
+episode: 1650/10000, score: 280, e: 0.0099, #moves: 57, max_tile: 32
+Saving weights...
+episode: 1651/10000, score: 644, e: 0.0099, #moves: 113, max_tile: 64
+episode: 1652/10000, score: 500, e: 0.0099, #moves: 129, max_tile: 32
+episode: 1653/10000, score: 232, e: 0.0099, #moves: 66, max_tile: 16
+episode: 1654/10000, score: 456, e: 0.0099, #moves: 117, max_tile: 64
+episode: 1655/10000, score: 452, e: 0.0099, #moves: 98, max_tile: 32
+episode: 1656/10000, score: 408, e: 0.0099, #moves: 71, max_tile: 32
+episode: 1657/10000, score: 620, e: 0.0099, #moves: 104, max_tile: 64
+episode: 1658/10000, score: 316, e: 0.0099, #moves: 59, max_tile: 32
+episode: 1659/10000, score: 388, e: 0.0099, #moves: 72, max_tile: 32
+episode: 1660/10000, score: 580, e: 0.0099, #moves: 119, max_tile: 32
+Saving weights...
+episode: 1661/10000, score: 648, e: 0.0099, #moves: 107, max_tile: 64
+episode: 1662/10000, score: 1360, e: 0.0099, #moves: 193, max_tile: 128
+episode: 1663/10000, score: 480, e: 0.0099, #moves: 78, max_tile: 32
+episode: 1664/10000, score: 1152, e: 0.0099, #moves: 187, max_tile: 128
+episode: 1665/10000, score: 492, e: 0.0099, #moves: 76, max_tile: 64
+episode: 1666/10000, score: 324, e: 0.0099, #moves: 89, max_tile: 32
+episode: 1667/10000, score: 276, e: 0.0099, #moves: 52, max_tile: 32
+episode: 1668/10000, score: 712, e: 0.0099, #moves: 202, max_tile: 64
+episode: 1669/10000, score: 996, e: 0.0099, #moves: 147, max_tile: 128
+episode: 1670/10000, score: 956, e: 0.0099, #moves: 279, max_tile: 64
+Saving weights...
+episode: 1671/10000, score: 464, e: 0.0099, #moves: 80, max_tile: 32
+episode: 1672/10000, score: 600, e: 0.0099, #moves: 125, max_tile: 32
+episode: 1673/10000, score: 236, e: 0.0099, #moves: 53, max_tile: 16
+episode: 1674/10000, score: 572, e: 0.0099, #moves: 104, max_tile: 64
+episode: 1675/10000, score: 648, e: 0.0099, #moves: 106, max_tile: 64
+episode: 1676/10000, score: 128, e: 0.0099, #moves: 51, max_tile: 16
+episode: 1677/10000, score: 508, e: 0.0099, #moves: 100, max_tile: 32
+episode: 1678/10000, score: 1844, e: 0.0099, #moves: 280, max_tile: 128
+episode: 1679/10000, score: 464, e: 0.0099, #moves: 110, max_tile: 32
+episode: 1680/10000, score: 1260, e: 0.0099, #moves: 237, max_tile: 128
+Saving weights...
+episode: 1681/10000, score: 676, e: 0.0099, #moves: 129, max_tile: 64
+episode: 1682/10000, score: 460, e: 0.0099, #moves: 73, max_tile: 32
+episode: 1683/10000, score: 1500, e: 0.0099, #moves: 329, max_tile: 128
+episode: 1684/10000, score: 608, e: 0.0099, #moves: 103, max_tile: 64
+episode: 1685/10000, score: 864, e: 0.0099, #moves: 365, max_tile: 64
+episode: 1686/10000, score: 436, e: 0.0099, #moves: 75, max_tile: 64
+episode: 1687/10000, score: 640, e: 0.0099, #moves: 102, max_tile: 64
+episode: 1688/10000, score: 1048, e: 0.0099, #moves: 187, max_tile: 64
+episode: 1689/10000, score: 1868, e: 0.0099, #moves: 618, max_tile: 128
+episode: 1690/10000, score: 1192, e: 0.0099, #moves: 179, max_tile: 64
+Saving weights...
+episode: 1691/10000, score: 652, e: 0.0099, #moves: 91, max_tile: 64
+episode: 1692/10000, score: 636, e: 0.0099, #moves: 110, max_tile: 64
+episode: 1693/10000, score: 972, e: 0.0099, #moves: 402, max_tile: 128
+episode: 1694/10000, score: 1152, e: 0.0099, #moves: 265, max_tile: 128
+episode: 1695/10000, score: 712, e: 0.0099, #moves: 106, max_tile: 64
+episode: 1696/10000, score: 512, e: 0.0099, #moves: 98, max_tile: 32
+episode: 1697/10000, score: 2304, e: 0.0099, #moves: 266, max_tile: 256
+episode: 1698/10000, score: 348, e: 0.0099, #moves: 171, max_tile: 32
+episode: 1699/10000, score: 356, e: 0.0099, #moves: 95, max_tile: 32
+episode: 1700/10000, score: 1392, e: 0.0099, #moves: 260, max_tile: 128
+Saving weights...
+episode: 1701/10000, score: 660, e: 0.0099, #moves: 167, max_tile: 64
+episode: 1702/10000, score: 768, e: 0.0099, #moves: 512, max_tile: 64
+episode: 1703/10000, score: 1180, e: 0.0099, #moves: 207, max_tile: 64
+episode: 1704/10000, score: 1112, e: 0.0099, #moves: 153, max_tile: 64
+episode: 1705/10000, score: 528, e: 0.0099, #moves: 81, max_tile: 64
+episode: 1706/10000, score: 1300, e: 0.0099, #moves: 480, max_tile: 128
+episode: 1707/10000, score: 424, e: 0.0099, #moves: 123, max_tile: 32
+episode: 1708/10000, score: 1228, e: 0.0099, #moves: 238, max_tile: 128
+episode: 1709/10000, score: 1264, e: 0.0099, #moves: 144, max_tile: 128
+episode: 1710/10000, score: 688, e: 0.0099, #moves: 118, max_tile: 64
+Saving weights...
+episode: 1711/10000, score: 240, e: 0.0099, #moves: 78, max_tile: 32
+episode: 1712/10000, score: 264, e: 0.0099, #moves: 58, max_tile: 32
+episode: 1713/10000, score: 432, e: 0.0099, #moves: 79, max_tile: 32
+episode: 1714/10000, score: 744, e: 0.0099, #moves: 126, max_tile: 64
+episode: 1715/10000, score: 416, e: 0.0099, #moves: 80, max_tile: 32
+episode: 1716/10000, score: 1144, e: 0.0099, #moves: 209, max_tile: 128
+episode: 1717/10000, score: 280, e: 0.0099, #moves: 52, max_tile: 32
+episode: 1718/10000, score: 216, e: 0.0099, #moves: 43, max_tile: 32
+episode: 1719/10000, score: 1028, e: 0.0099, #moves: 151, max_tile: 64
+episode: 1720/10000, score: 1280, e: 0.0099, #moves: 438, max_tile: 128
+Saving weights...
+episode: 1721/10000, score: 612, e: 0.0099, #moves: 124, max_tile: 64
+episode: 1722/10000, score: 356, e: 0.0099, #moves: 84, max_tile: 32
+episode: 1723/10000, score: 332, e: 0.0099, #moves: 92, max_tile: 32
