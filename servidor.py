@@ -1,17 +1,15 @@
-from flask import Flask
+from flask import Flask, send_file
 
-app = Flask(__name__,static_url_path='/save')
-
+app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return "Hello World!"
-
+def home():
+    return "Entrenando red neuronal! Descarga los pesos más recientes desde /w"
 
 @app.route('/w')
-def hello_name():
-    w_fn = "temp_w.h5"
-    return app.send_static_file(w_fn)
+def send_weights():
+    w_fn = "save/temp_w.h5"
+    return send_file(w_fn, as_attachment=True)
 
 if __name__ == '__main__':
     app.run()

@@ -12,16 +12,15 @@ import os
 import tensorflow as tf
 import game.browser_control as bc
 import game.game_control as gc
+import urllib.request
 
-EPISODES = 10000
-PROGRESS_FN = "temp_p.csv"
-WEIGHTS_FN = "./save/temp_w.h5"
-ld_weights=False
+
 
 
 def append_to_csv(fn, csv_row):
-    with open(fn,'a') as fd:
+    with open(fn, 'a') as fd:
         fd.write(csv_row)
+
 
 class DQNAgent:
     def __init__(self, state_size, action_size):
@@ -45,10 +44,11 @@ class DQNAgent:
 
     def _huber_loss(self, y_true, y_pred, clip_delta=1.0):
         error = y_true - y_pred
-        cond  = K.abs(error) <= clip_delta
+        cond = K.abs(error) <= clip_delta
 
         squared_loss = 0.5 * K.square(error)
-        quadratic_loss = 0.5 * K.square(clip_delta) + clip_delta * (K.abs(error) - clip_delta)
+        quadratic_loss = 0.5 * \
+            K.square(clip_delta) + clip_delta * (K.abs(error) - clip_delta)
 
         return K.mean(tf.where(cond, squared_loss, quadratic_loss))
 
@@ -97,20 +97,34 @@ class DQNAgent:
         self.model.save_weights(name)
 
 
+def get_w():
+    print('Beginning file download with urllib2...')
+    url = 'http://localhost:5000/w'
+    local_fn = LOCAL_W_FN
+    urllib.request.urlretrieve(url, local_fn)
+    return local_fn
+
+
+EPISODES = 10000
+PROGRESS_FN = "temp_p.csv"
+WEIGHTS_FN = "./save/temp_w.h5"
+LOCAL_W_FN = './dwl/pesos_az.h5'
+azure_weights = True
+
 if __name__ == "__main__":
     bc.init()
     # env = gym.make('CartPole-v1')
     # env = gym.make('2048-v0')
     # state_size = env.observation_space.shape
-    state_size = 16 #np.prod(state_size)
-    action_size = 4 #env.action_space.n
+    state_size = 16  # np.prod(state_size)
+    action_size = 4  # env.action_space.n
     agent = DQNAgent(state_size, action_size)
-    if ld_weights is True:
-        print("Loading weights...")
-        agent.load(WEIGHTS_FN)
+    if azure_weights is True:
+        print("Descargando pesos de Azure...")
+        w_fn = get_w()
+        agent.load(w_fn)
     done = False
     batch_size = 32
-
 
     for e in range(EPISODES):
         gc.restart_game()
@@ -121,7 +135,7 @@ if __name__ == "__main__":
         for time in range(10000):
             # env.render()
             # print("\n")
-                
+
             action = agent.act(state)
             curr_score = gc.getScore()
             gc.performMove(action)
@@ -140,13 +154,14 @@ if __name__ == "__main__":
                 state = next_state
             if done:
                 agent.update_target_model()
-                print("episode: {}/{}, score: {}, e: {:.2}, #moves: {}, max_tile: {}".format(e, EPISODES, max_score, agent.epsilon, time, max_tile))
-                csv_row = "{};{};{};{};{};{}\n".format(e,EPISODES,max_score,agent.epsilon, time, max_tile)
-                append_to_csv(PROGRESS_FN,csv_row)
+                print("episode: {}/{}, score: {}, e: {:.2}, #moves: {}, max_tile: {}".format(
+                    e, EPISODES, max_score, agent.epsilon, time, max_tile))
+                csv_row = "{};{};{};{};{};{}\n".format(
+                    e, EPISODES, max_score, agent.epsilon, time, max_tile)
+                append_to_csv(PROGRESS_FN, csv_row)
                 break
             if len(agent.memory) > batch_size:
                 agent.replay(batch_size)
         if e % 10 == 0:
             print("Saving weights...")
             agent.save(WEIGHTS_FN)
-            
