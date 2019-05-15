@@ -11,10 +11,6 @@ from keras import backend as K
 import os
 import tensorflow as tf
 
-EPISODES = 10000
-PROGRESS_FN = "progress.csv"
-WEIGHTS_FN = "./save/2048ddqn2.h5"
-ld_weights=True
 
 
 def append_to_csv(fn, csv_row):
@@ -94,9 +90,12 @@ class DQNAgent:
     def save(self, name):
         self.model.save_weights(name)
 
+EPISODES = 10000
+PROGRESS_FN = "progress.csv"
+WEIGHTS_FN = "./save/2048ddqn2.h5"
+ld_weights=True
 
 if __name__ == "__main__":
-    # env = gym.make('CartPole-v1')
     env = gym.make('2048-v0')
     state_size = env.observation_space.shape
     state_size = np.prod(state_size)
