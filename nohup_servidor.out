@@ -1,0 +1,19 @@
+  File "servidor.py", line 7
+SyntaxError: Non-ASCII character '\xc3' in file servidor.py on line 7, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+ * Serving Flask app "servidor" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [15/May/2019 03:37:32] "[37mGET / HTTP/1.1[0m" 200 -
+ * Serving Flask app "servidor" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+200.39.241.87 - - [15/May/2019 03:39:57] "[37mGET / HTTP/1.1[0m" 200 -
+200.39.241.87 - - [15/May/2019 03:39:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+200.39.241.87 - - [15/May/2019 03:40:02] "[37mGET /w HTTP/1.1[0m" 200 -
+200.39.241.87 - - [15/May/2019 03:42:58] "[37mGET /w HTTP/1.1[0m" 200 -

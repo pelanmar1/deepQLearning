@@ -1,0 +1,58 @@
+Traceback (most recent call last):
+  File "ddqn.py", line 3, in <module>
+    import gym_2048
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym_2048/__init__.py", line 1, in <module>
+    from gym.envs.registration import register
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym/__init__.py", line 10, in <module>
+    from gym.spaces import Space
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym/spaces/__init__.py", line 2, in <module>
+    from gym.spaces.box import Box
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym/spaces/box.py", line 1, in <module>
+    import numpy as np
+  File "/home/sdist/.local/lib/python3.6/site-packages/numpy/__init__.py", line 142, in <module>
+    from . import core
+  File "/home/sdist/.local/lib/python3.6/site-packages/numpy/core/__init__.py", line 91, in <module>
+    raise ImportError(msg.format(path))
+ImportError: Something is wrong with the numpy installation. While importing we detected an older version of numpy in ['/home/sdist/.local/lib/python3.6/site-packages/numpy']. One method of fixing this is to repeatedly uninstall numpy until none is found, then reinstall this version.
+Traceback (most recent call last):
+  File "ddqn.py", line 3, in <module>
+    import gym_2048
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym_2048/__init__.py", line 1, in <module>
+    from gym.envs.registration import register
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym/__init__.py", line 10, in <module>
+    from gym.spaces import Space
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym/spaces/__init__.py", line 2, in <module>
+    from gym.spaces.box import Box
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym/spaces/box.py", line 1, in <module>
+    import numpy as np
+  File "/home/sdist/.local/lib/python3.6/site-packages/numpy/__init__.py", line 142, in <module>
+    from . import core
+  File "/home/sdist/.local/lib/python3.6/site-packages/numpy/core/__init__.py", line 91, in <module>
+    raise ImportError(msg.format(path))
+ImportError: Something is wrong with the numpy installation. While importing we detected an older version of numpy in ['/home/sdist/.local/lib/python3.6/site-packages/numpy']. One method of fixing this is to repeatedly uninstall numpy until none is found, then reinstall this version.
+Traceback (most recent call last):
+  File "ddqn.py", line 3, in <module>
+    import gym_2048
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym_2048/__init__.py", line 1, in <module>
+    from gym.envs.registration import register
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym/__init__.py", line 10, in <module>
+    from gym.spaces import Space
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym/spaces/__init__.py", line 2, in <module>
+    from gym.spaces.box import Box
+  File "/home/sdist/.local/lib/python3.6/site-packages/gym/spaces/box.py", line 1, in <module>
+    import numpy as np
+  File "/home/sdist/.local/lib/python3.6/site-packages/numpy/__init__.py", line 142, in <module>
+    from . import core
+  File "/home/sdist/.local/lib/python3.6/site-packages/numpy/core/__init__.py", line 91, in <module>
+    raise ImportError(msg.format(path))
+ImportError: Something is wrong with the numpy installation. While importing we detected an older version of numpy in ['/home/sdist/.local/lib/python3.6/site-packages/numpy']. One method of fixing this is to repeatedly uninstall numpy until none is found, then reinstall this version.
+Using TensorFlow backend.
+/home/sdist/.local/lib/python3.6/site-packages/gym_2048/env.py:120: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  board[tile_locs] = tiles
+WARNING:tensorflow:From /home/sdist/.local/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-05-15 03:54:43.881626: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-15 03:54:43.886348: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394450000 Hz
+2019-05-15 03:54:43.886549: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x2d4e2b0 executing computations on platform Host. Devices:
+2019-05-15 03:54:43.886575: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
