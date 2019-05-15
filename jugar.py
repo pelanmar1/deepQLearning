@@ -99,25 +99,23 @@ class DQNAgent:
 
 def get_w():
     print('Beginning file download with urllib2...')
-    url = 'http://localhost:5000/w'
+    # url = 'http://localhost:5000/w'
+    url = "http://40.112.50.212:5000/w"
     local_fn = LOCAL_W_FN
     urllib.request.urlretrieve(url, local_fn)
     return local_fn
 
 
 EPISODES = 10000
-PROGRESS_FN = "temp_p.csv"
+PROGRESS_FN = "temp_prog.csv"
 WEIGHTS_FN = "./save/temp_w.h5"
 LOCAL_W_FN = './dwl/pesos_az.h5'
 azure_weights = True
 
 if __name__ == "__main__":
     bc.init()
-    # env = gym.make('CartPole-v1')
-    # env = gym.make('2048-v0')
-    # state_size = env.observation_space.shape
-    state_size = 16  # np.prod(state_size)
-    action_size = 4  # env.action_space.n
+    state_size = 16  # Entrada de la red
+    action_size = 4  # Salida de la red
     agent = DQNAgent(state_size, action_size)
     if azure_weights is True:
         print("Descargando pesos de Azure...")
