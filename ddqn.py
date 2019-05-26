@@ -90,7 +90,7 @@ class DQNAgent:
     def save(self, name):
         self.model.save_weights(name)
 
-EPISODES = 10000
+EPISODES = 1000000
 PROGRESS_FN = "progress.csv"
 WEIGHTS_FN = "./save/2048ddqn2.h5"
 ld_weights=True
